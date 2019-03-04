@@ -4110,8 +4110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardTurret:
-    prefab: {fileID: 4117835840956276121, guid: 5318448b7900a17459a7b7610b08c0aa,
-      type: 3}
+    prefab: {fileID: 1179809721236326, guid: 6e81ad7b6d010274ca07c5c894fe9e6b, type: 3}
     cost: 100
   missleLauncher:
     prefab: {fileID: 3632875014869101097, guid: 3255ea6591eb7494d927dd0d18e74ba5,
@@ -14507,7 +14506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e7710d2aae1f143a6acd6fa6835e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2687767733401329954, guid: 2177e63f8aa0a924c96783c0df667d0e,
+  enemyPrefab: {fileID: 2582237728139126396, guid: 0ca05f4830e7fb0429f78d119d8a8f0f,
     type: 3}
   spawnPoint: {fileID: 746748207}
   timeBetweenWaves: 20
