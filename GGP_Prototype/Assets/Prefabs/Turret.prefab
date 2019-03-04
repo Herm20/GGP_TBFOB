@@ -238,7 +238,7 @@ MonoBehaviour:
   enemyTag: Enemy
   bulletObj: {fileID: 2745685942925560903, guid: 8d3453410d4f02e43862cb6f52c8d03b,
     type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 7718244736622933755}
 --- !u!1 &4117835841274547408
 GameObject:
   m_ObjectHideFlags: 0

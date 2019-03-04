@@ -17,8 +17,9 @@ public class Turret : MonoBehaviour
     public GameObject bulletObj;
     public Transform firePoint;
 
-    
-
+    public bool useLaser = false;
+    public LineRenderer lineRenderer;
+    public float laserDamage = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -58,22 +59,45 @@ public class Turret : MonoBehaviour
     {
         if (target == null)
         {
+            if (useLaser)
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
+
             return;
         }
 
         // Target lock on
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        transform.rotation = Quaternion.Euler(0.0f, rotation.y, 0.0f);
+        LockOnTarget();
 
-        if (fireCountdown <= 0.0f)
+        if (useLaser)
         {
-            Shoot();
-            fireCountdown = 1.0f / fireRate;
-        }
+            Laser();
+            if (target != null)
+            {
+                if (laserDamage <= 0.0f)
+                {
+                    laserDamage = 3.0f;
+                    Destroy(target.gameObject);
+                }
 
-        fireCountdown -= Time.deltaTime;
+                laserDamage -= Time.deltaTime;
+            }
+            
+        }
+        else
+        {
+            if (fireCountdown <= 0.0f)
+            {
+                Shoot();
+                fireCountdown = 1.0f / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
+        }
     }
 
     void Shoot()
@@ -86,6 +110,25 @@ public class Turret : MonoBehaviour
         {
             bullet.Seek(target);
         }
+    }
+
+    void Laser()
+    {
+        if (!lineRenderer.enabled)
+        {
+            lineRenderer.enabled = true;
+        }
+
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
+    }
+
+    void LockOnTarget()
+    {
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        transform.rotation = Quaternion.Euler(0.0f, rotation.y, 0.0f);
     }
 
     private void OnDrawGizmosSelected()
