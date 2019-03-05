@@ -4110,7 +4110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardTurret:
-    prefab: {fileID: 1179809721236326, guid: 6e81ad7b6d010274ca07c5c894fe9e6b, type: 3}
+    prefab: {fileID: 4117835840956276121, guid: 5318448b7900a17459a7b7610b08c0aa,
+      type: 3}
     cost: 100
   missleLauncher:
     prefab: {fileID: 3632875014869101097, guid: 3255ea6591eb7494d927dd0d18e74ba5,
@@ -11483,7 +11484,7 @@ PrefabInstance:
     - target: {fileID: 2009880605408162338, guid: fefe28a47e75f0c4cb9079a84e408cd2,
         type: 3}
       propertyPath: m_Text
-      value: 'Laser Turret
+      value: 'Zap Cannon
 
         cost: 175'
       objectReference: {fileID: 0}
@@ -12283,10 +12284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1029d75541e041b43709341b789a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSpeed: 30
+  panSpeed: 10
   panBorderThinkness: 10
   scrollSpeed: 5
-  minY: 50
+  minY: 30
   maxY: 90
 --- !u!1001 &1417018924
 PrefabInstance:
@@ -14474,93 +14475,16 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1732806671}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1733401928
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733401930}
-  - component: {fileID: 1733401929}
-  - component: {fileID: 1733401931}
-  - component: {fileID: 1733401932}
-  - component: {fileID: 1733401933}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1733401929
+--- !u!114 &1733401929 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 652647811561156099, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+    type: 3}
+  m_PrefabInstance: {fileID: 652647813193691978}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733401928}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e7710d2aae1f143a6acd6fa6835e5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2582237728139126396, guid: 0ca05f4830e7fb0429f78d119d8a8f0f,
-    type: 3}
-  spawnPoint: {fileID: 746748207}
-  timeBetweenWaves: 20
-  waveCountdownText: {fileID: 843200979}
---- !u!4 &1733401930
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733401928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.34235, y: -17.351706, z: -10.323073}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733401931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733401928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010c652b05b2ac94baf8866949e679bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1733401932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733401928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e825114710a1d547baaa2616fa4ad1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startMoney: 400
-  startLives: 20
---- !u!114 &1733401933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733401928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef132bca6a7b5341a286b8d56fe739d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1735212939
@@ -16162,9 +16086,7 @@ PrefabInstance:
     - target: {fileID: 2009880605408162338, guid: fefe28a47e75f0c4cb9079a84e408cd2,
         type: 3}
       propertyPath: m_Text
-      value: 'Missle Launcher
-
-        Turret
+      value: 'Bubble Launcher
 
         cost: 250'
       objectReference: {fileID: 0}
@@ -17915,6 +17837,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2140184068}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &652647813193691978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 652647811561156098, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.34235
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.351706
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.323073
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156096, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652647811561156099, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 746748207}
+    - target: {fileID: 652647811561156099, guid: cf84e3cfae4e1f14da5e8bd396ea0d72,
+        type: 3}
+      propertyPath: waveCountdownText
+      value: 
+      objectReference: {fileID: 843200979}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf84e3cfae4e1f14da5e8bd396ea0d72, type: 3}
 --- !u!1001 &2009880605388464756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18045,7 +18046,7 @@ PrefabInstance:
     - target: {fileID: 2009880605408162338, guid: fefe28a47e75f0c4cb9079a84e408cd2,
         type: 3}
       propertyPath: m_Text
-      value: 'Standard Turret
+      value: 'FireBall Cannon
 
         cost: 100'
       objectReference: {fileID: 0}
